@@ -9,7 +9,7 @@ public class ConsultationController {
         repository.save(request);
         
         // Ye line ab turant execute ho jayegi, wait nahi karegi
-        emailService.sendEmailToAdmin(request); 
+//        emailService.sendEmailToAdmin(request); 
 
         model.addAttribute("successMessage", "Submitted!");
         return "layout/consultancy";
