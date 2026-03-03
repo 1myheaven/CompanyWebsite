@@ -3,6 +3,7 @@ package in.sp.main.controller.publicsite;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.scheduling.annotation.Async; // 1. Ye import karein
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +18,7 @@ public class ConsultationController {
     private final ConsultationRepository repository;
 
     @Autowired
-    private JavaMailSender mailSender; // ✉️ Email bhejne wali machine
+    private JavaMailSender mailSender;
 
     public ConsultationController(ConsultationRepository repository) {
         this.repository = repository;
@@ -31,11 +32,10 @@ public class ConsultationController {
 
     @PostMapping
     public String submitForm(@ModelAttribute ConsultationRequest consultationRequest, Model model) {
-
-        // 1. Database mein save karein
+        // 1. Database mein save turant hoga
         repository.save(consultationRequest);
 
-        // 2. Email bhejne ka process (Try-Catch zaroori hai taaki error na aaye)
+        // 2. Email background mein jayegi (User wait nahi karega)
         try {
             sendEmailToAdmin(consultationRequest);
         } catch (Exception e) {
@@ -48,11 +48,11 @@ public class ConsultationController {
         return "layout/consultancy";
     }
 
-    // Yeh function email banayega aur bhejega
-    private void sendEmailToAdmin(ConsultationRequest request) {
+    @Async // <--- 2. Sabse zaroori annotation!
+    protected void sendEmailToAdmin(ConsultationRequest request) {
         SimpleMailMessage message = new SimpleMailMessage();
-        
-        message.setTo("abhisheksingh09072001@gmail.com"); // Jaha aapko notification chahiye
+        message.setFrom("abhisheksingh09072001@gmail.com"); 
+        message.setTo("abhisheksingh09072001@gmail.com");
         message.setSubject("New Consultation Request: " + request.getName());
         
         String emailBody = "Hi Admin,\n\n" +
@@ -67,6 +67,10 @@ public class ConsultationController {
         
         message.setText(emailBody);
         
-        mailSender.send(message); // 🚀 Email send!
+        try {
+            mailSender.send(message);
+        } catch (Exception e) {
+            System.err.println("Background Email Failed: " + e.getMessage());
+        }
     }
 }
