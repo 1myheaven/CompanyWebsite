@@ -1,13 +1,13 @@
-# Step 1: Build the application using Maven
-FROM maven:3.8.4-openjdk-17 AS build
+# Step 1: Build the application
+FROM maven:3.9.6-amazoncorretto-17 AS build
 WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
 
-# Step 2: Run the application using a stable OpenJDK 17 image
-# Humne 'openjdk:17-jdk-slim' ko 'eclipse-temurin:17-jdk-alpine' se badal diya hai
-FROM eclipse-temurin:17-jdk-alpine
+# Step 2: Run the application
+FROM amazoncorretto:17-alpine
 WORKDIR /app
-COPY --from=build /app/target/CompanyWebsite-1.0.jar app.jar
+# *.jar use karne se version naming ka issue nahi aayega
+COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8081
 ENTRYPOINT ["java", "-jar", "app.jar"]
