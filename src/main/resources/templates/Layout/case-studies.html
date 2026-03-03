@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{layout/base :: head('Case Studies | YourCompany')}"></head>
+
+<body>
+
+<div th:replace="~{layout/base :: navbar}"></div>
+
+<!-- ================= CASE STUDIES SECTION ================= -->
+<section class="py-5 bg-light">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Our Case Studies</h2>
+            <p class="text-muted">
+                Real impact through data-driven decisions and strategic consultancy.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Case Study 1 -->
+            <div class="col-md-6">
+                <div class="card shadow-sm border-0 rounded-4 h-100 p-4">
+                    <h5 class="fw-bold">📊 Business Profit Optimization</h5>
+                    <p class="text-muted">
+                        A local startup was facing consistent losses without
+                        understanding the root cause.
+                    </p>
+
+                    <ul class="text-muted">
+                        <li>✔ Analyzed 6 months financial data</li>
+                        <li>✔ Identified unnecessary operational expenses</li>
+                        <li>✔ Suggested cost restructuring strategy</li>
+                    </ul>
+
+                    <p class="fw-semibold text-success">
+                        Result: 28% profit growth within 3 months.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Case Study 2 -->
+            <div class="col-md-6">
+                <div class="card shadow-sm border-0 rounded-4 h-100 p-4">
+                    <h5 class="fw-bold">🌐 Digital Presence Transformation</h5>
+                    <p class="text-muted">
+                        A consultancy firm had no digital visibility
+                        and low client engagement.
+                    </p>
+
+                    <ul class="text-muted">
+                        <li>✔ Built modern responsive website</li>
+                        <li>✔ Optimized SEO strategy</li>
+                        <li>✔ Implemented lead capture system</li>
+                    </ul>
+
+                    <p class="fw-semibold text-success">
+                        Result: 3x increase in monthly inquiries.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Case Study 3 -->
+            <div class="col-md-6">
+                <div class="card shadow-sm border-0 rounded-4 h-100 p-4">
+                    <h5 class="fw-bold">🎓 Student Career Planning</h5>
+                    <p class="text-muted">
+                        A final-year student was confused about career direction
+                        and lacked practical skills.
+                    </p>
+
+                    <ul class="text-muted">
+                        <li>✔ Conducted skill gap analysis</li>
+                        <li>✔ Suggested industry-relevant roadmap</li>
+                        <li>✔ Guided internship preparation</li>
+                    </ul>
+
+                    <p class="fw-semibold text-success">
+                        Result: Secured internship within 2 months.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Case Study 4 -->
+            <div class="col-md-6">
+                <div class="card shadow-sm border-0 rounded-4 h-100 p-4">
+                    <h5 class="fw-bold">📈 Data-Driven Growth Strategy</h5>
+                    <p class="text-muted">
+                        A small business lacked clear financial tracking
+                        and growth planning.
+                    </p>
+
+                    <ul class="text-muted">
+                        <li>✔ Built profit-loss tracking dashboard</li>
+                        <li>✔ Monthly performance review system</li>
+                        <li>✔ Strategic growth roadmap</li>
+                    </ul>
+
+                    <p class="fw-semibold text-success">
+                        Result: Structured financial control & steady growth.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5 text-center bg-primary text-white">
+    <div class="container">
+        <h3 class="fw-bold mb-3">Want to Be Our Next Success Story?</h3>
+        <p class="mb-4">Let us help you transform your business or career.</p>
+        <a th:href="@{/consultation}" class="btn btn-light btn-lg rounded-3">
+            Book Consultation
+        </a>
+    </div>
+</section>
+
+<div th:replace="~{layout/base :: footer}"></div>
+
+</body>
+</html>

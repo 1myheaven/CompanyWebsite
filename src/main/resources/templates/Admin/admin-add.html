@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout/base :: head('Add Message')"></head>
+
+<body>
+	<div th:replace="admin/admin-navbar :: *"></div>
+<!--<div th:replace="layout/base :: navbar"></div>-->
+
+<section class="py-5">
+    <div class="container">
+        <h2 class="fw-bold mb-4 text-center">Add Contact Message</h2>
+
+        <form th:action="@{/admin/messages/save}" method="post" th:object="${contactMessage}">
+            <input type="text" th:field="*{name}" placeholder="Name" class="form-control mb-2"/>
+            <input type="email" th:field="*{email}" placeholder="Email" class="form-control mb-2"/>
+            <input type="text" th:field="*{subject}" placeholder="Subject" class="form-control mb-2"/>
+            <textarea th:field="*{message}" placeholder="Message" class="form-control mb-2"></textarea>
+
+            <button type="submit" class="btn btn-success">Save</button>
+        </form>
+
+    </div>
+</section>
+
+<div th:replace="layout/base :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!-- admin-navbar.html -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="/admin">Admin Panel</a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#adminNavbar" aria-controls="adminNavbar" 
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="adminNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/admin/consultations}">Consultations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/admin/messages}">Contacts</a>
+                </li>
+            </ul>
+
+            <!-- Logout Form -->
+            <form th:action="@{/logout}" method="post" class="d-flex">
+                <button type="submit" class="btn btn-outline-light fw-bold">
+                    Logout
+                </button>
+            </form>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout/base :: head('Admin Messages')"></head>
+
+<body>
+	
+<div th:replace="layout/base :: navbar"></div>
+
+<section class="py-5">
+    <div class="container">
+        <h2 class="fw-bold mb-4 text-center">Contact Messages</h2>
+
+		<!-- ADD NEW BUTTON -->
+		<div class="mb-3 text-end">
+		    <a th:href="@{/admin/messages/add}" class="btn btn-success">
+		        Add New Message
+		    </a>
+		</div>
+		
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Subject</th>
+                <th>Message</th>
+                <th>Date</th>
+				<th>Action</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="msg : ${messages}">
+                <td th:text="${msg.id}"></td>
+                <td th:text="${msg.name}"></td>
+                <td th:text="${msg.email}"></td>
+                <td th:text="${msg.subject}"></td>
+                <td th:text="${msg.message}"></td>
+                <td th:text="${msg.createdAt}"></td>
+				<td>
+				    <a th:href="@{/admin/messages/edit/{id}(id=${msg.id})}"
+				       class="btn btn-sm btn-warning">
+				        Edit
+				    </a>
+
+				    <a th:href="@{/admin/messages/delete/{id}(id=${msg.id})}"
+				       class="btn btn-sm btn-danger"
+				       onclick="return confirm('Are you sure?')">
+				        Delete
+				    </a>
+				</td>
+
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</section>
+
+<div th:replace="layout/base :: footer"></div>
+
+</body>
+</html>

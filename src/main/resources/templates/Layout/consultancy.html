@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout/base :: head('Consultancy | NirmalVeda Solutions')"></head>
+
+<body>
+
+<div th:replace="layout/base :: navbar"></div>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="py-5 text-white" style="background: linear-gradient(135deg,#0f172a,#1e3a8a);">
+    <div class="container text-center">
+        <h1 class="fw-bold display-5">Data-Driven Consulting for Businesses & Individuals</h1>
+        <p class="lead mt-3">
+            We analyze your business data, identify loss patterns, and provide AI-powered growth strategies.
+        </p>
+
+        <div class="mt-4">
+            <a href="#consultForm" class="btn btn-warning btn-lg me-3 fw-bold">Get Business Analysis</a>
+            <a href="#consultForm" class="btn btn-outline-light btn-lg">Student Guidance</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= SERVICES SECTION ================= -->
+<section class="py-5 bg-light">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">What We Offer</h2>
+            <p class="text-muted">Strategic Solutions Backed by Data & Experience</p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Business -->
+            <div class="col-md-4">
+                <div class="card shadow h-100 border-0">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold">💼 Business Consultancy</h5>
+                        <ul class="list-unstyled mt-3">
+                            <li>✔ Profit & Loss Analysis</li>
+                            <li>✔ Sales Pattern Tracking</li>
+                            <li>✔ AI-Based Forecasting</li>
+                            <li>✔ Growth Strategy Report</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Website -->
+            <div class="col-md-4">
+                <div class="card shadow h-100 border-0">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold">🌐 Website Strategy</h5>
+                        <ul class="list-unstyled mt-3">
+                            <li>✔ Business Website Planning</li>
+                            <li>✔ Conversion Optimization</li>
+                            <li>✔ Digital Branding Strategy</li>
+                            <li>✔ Performance Audit</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Student -->
+            <div class="col-md-4">
+                <div class="card shadow h-100 border-0">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold">🎓 Student & Life Guidance</h5>
+                        <ul class="list-unstyled mt-3">
+                            <li>✔ Career Clarity Sessions</li>
+                            <li>✔ Personal Growth Plan</li>
+                            <li>✔ Relationship Guidance</li>
+                            <li>✔ Decision Framework</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= PROCESS SECTION ================= -->
+<section class="py-5">
+    <div class="container text-center">
+
+        <h2 class="fw-bold mb-5">How Our Consulting Process Works</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-3">
+                <div class="p-4 shadow rounded">
+                    <h5 class="fw-bold">Step 1</h5>
+                    <p>Submit your business data or consultation request.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="p-4 shadow rounded">
+                    <h5 class="fw-bold">Step 2</h5>
+                    <p>We analyze using Data Analytics & AI models.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="p-4 shadow rounded">
+                    <h5 class="fw-bold">Step 3</h5>
+                    <p>Generate detailed performance & loss report.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="p-4 shadow rounded">
+                    <h5 class="fw-bold">Step 4</h5>
+                    <p>You receive strategy + 1-on-1 consultation session.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= CONSULTATION FORM ================= -->
+<section id="consultForm" class="py-5 bg-dark text-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <h2 class="text-center fw-bold mb-4">Book a Consultation</h2>
+
+                <form th:action="@{/consultation}" method="post" th:object="${consultationRequest}" enctype="multipart/form-data">
+
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" th:field="*{name}" class="form-control"
+						placeholder="Enter your name" required>
+                        <div class="text-danger" th:errors="*{name}"></div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" th:field="*{email}" class="form-control"
+						placeholder="Enter your email" required>
+                        <div class="text-danger" th:errors="*{email}"></div>
+                    </div>
+					
+					<!-- ✅ NEW PHONE FIELD -->
+					
+					    <div class="mb-3">
+					        <label class="form-label">Phone Number</label>
+					        <input type="text" th:field="*{phone}" class="form-control"
+							placeholder="Enter your contact number" required>
+					        <div class="text-danger" th:errors="*{phone}"></div>
+					    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Consultation Type</label>
+                        <select th:field="*{type}" class="form-select">
+                            <option value="">Select Type</option>
+                            <option value="Business">Business Consultancy</option>
+                            <option value="Website">Website Strategy</option>
+                            <option value="Student">Student Guidance</option>
+                        </select>
+                        <div class="text-danger" th:errors="*{type}"></div>
+                    </div>
+
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Message</label>
+                        <textarea th:field="*{message}" class="form-control" rows="4"></textarea>
+                        <div class="text-danger" th:errors="*{message}"></div>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-warning btn-lg fw-bold">
+                            Book Consultation
+                        </button>
+                    </div>
+
+                </form>
+
+                <div class="text-success text-center mt-3"
+                     th:if="${successMessage}"
+                     th:text="${successMessage}">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div th:replace="layout/base :: footer"></div>
+
+</body>
+</html>

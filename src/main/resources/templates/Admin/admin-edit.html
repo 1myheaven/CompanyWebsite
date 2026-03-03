@@ -1,0 +1,12 @@
+
+<form th:action="@{/admin/messages/update}" method="post" th:object="${contactMessage}">
+
+    <input type="hidden" th:field="*{id}" />
+
+    <input type="text" th:field="*{name}" class="form-control mb-2" placeholder="Name"/>
+    <input type="email" th:field="*{email}" class="form-control mb-2" placeholder="Email"/>
+    <input type="text" th:field="*{subject}" class="form-control mb-2" placeholder="Subject"/>
+    <textarea th:field="*{message}" class="form-control mb-2" placeholder="Message"></textarea>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>

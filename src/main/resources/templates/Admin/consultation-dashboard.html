@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+	
+<div class="container py-5">
+
+    <h2 class="mb-4">Consultation Dashboard</h2>
+
+    <!-- Total Card -->
+    <div class="card text-white bg-primary p-4 mb-4">
+        <h5>Total Applications</h5>
+        <h2 th:text="${total}"></h2>
+    </div>
+
+    <!-- Table -->
+    <div class="card shadow">
+        <div class="card-body">
+
+			<table class="table table-bordered table-hover">
+			    <thead class="table-dark">
+			        <tr>
+			            <th>ID</th>
+			            <th>Name</th>
+			            <th>Email</th>
+			            <th>Phone</th>
+			            <th>Type</th>
+			            <th>Message</th>
+			            <th>Date</th>
+			            <th>Action</th> <!-- ✅ New Column -->
+			        </tr>
+			    </thead>
+
+			    <tbody>
+			        <tr th:each="req : ${requests}">
+			            <td th:text="${req.id}"></td>
+			            <td th:text="${req.name}"></td>
+			            <td th:text="${req.email}"></td>
+			            <td th:text="${req.phone}"></td>
+			            <td th:text="${req.type}"></td>
+			            <td th:text="${req.message}"></td>
+			            <td th:text="${req.createdAt}"></td>
+
+			            <!-- ✅ Delete Button -->
+			            <td>
+			                <form th:action="@{'/admin/consultations/delete/' + ${req.id}}"
+			                      method="post"
+			                      onsubmit="return confirm('Are you sure you want to delete this record?');">
+			                    <button type="submit" class="btn btn-danger btn-sm">
+			                        Delete
+			                    </button>
+			                </form>
+			            </td>
+
+			        </tr>
+			    </tbody>
+			</table>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

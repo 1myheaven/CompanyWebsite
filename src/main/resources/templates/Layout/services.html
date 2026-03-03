@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{layout/base :: head('Our Services | YourCompany')}"></head>
+
+<body>
+
+<div th:replace="~{layout/base :: navbar}"></div>
+
+<section class="py-5 bg-light">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Our Professional Services</h2>
+            <p class="text-muted">
+                We help businesses grow digitally and guide students towards a stable future.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Website Development -->
+            <div class="col-md-6">
+                <div class="card shadow-sm border-0 rounded-4 h-100 p-4">
+                    <h5 class="fw-bold">🌐 Website Development</h5>
+                    <p class="text-muted">
+                        We design and develop modern, responsive, and scalable websites
+                        for startups, businesses, and personal brands.
+                        From company websites to dynamic web applications.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Data Analytics -->
+            <div class="col-md-6">
+                <div class="card shadow-sm border-0 rounded-4 h-100 p-4">
+                    <h5 class="fw-bold">📊 Profit & Loss Analysis</h5>
+                    <p class="text-muted">
+                        Using advanced data analytics, we analyze your business data
+                        to identify profit trends, loss areas, and growth opportunities.
+                        Make data-driven decisions with confidence.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Student Consultancy -->
+            <div class="col-md-6">
+                <div class="card shadow-sm border-0 rounded-4 h-100 p-4">
+                    <h5 class="fw-bold">🎓 Student Consultancy</h5>
+                    <p class="text-muted">
+                        We guide students in career planning, skill development,
+                        internship opportunities, and real-world industry exposure
+                        to help them survive and succeed in today’s competitive world.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Career & Life Guidance -->
+            <div class="col-md-6">
+                <div class="card shadow-sm border-0 rounded-4 h-100 p-4">
+                    <h5 class="fw-bold">💼 Career & Life Strategy</h5>
+                    <p class="text-muted">
+                        Our consultancy focuses on long-term growth planning.
+                        We help individuals build stable income sources,
+                        improve decision-making skills, and create sustainable life strategies.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Call To Action -->
+<section class="py-5 text-center bg-primary text-white">
+    <div class="container">
+        <h3 class="fw-bold mb-3">Ready to Grow & Plan Your Future?</h3>
+        <p class="mb-4">Let us help you build a profitable business and a secure career path.</p>
+        <a th:href="@{/contact}" class="btn btn-light btn-lg rounded-3">
+            Get Consultation
+        </a>
+    </div>
+</section>
+
+<div th:replace="~{layout/base :: footer}"></div>
+
+</body>
+</html>
