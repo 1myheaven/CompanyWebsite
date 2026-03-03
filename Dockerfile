@@ -5,6 +5,7 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 # Step 2: Run the application using a stable OpenJDK 17 image
+# Humne 'openjdk:17-jdk-slim' ko 'eclipse-temurin:17-jdk-alpine' se badal diya hai
 FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
 COPY --from=build /app/target/CompanyWebsite-1.0.jar app.jar
