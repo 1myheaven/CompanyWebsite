@@ -22,7 +22,7 @@ public class AdminController {
     public String listMessages(Model model) {
         model.addAttribute("messages", contactRepository.findAll());
         return "admin/admin-messages"; // admin ke liye list template
-    }s
+    }
 
     // ================= DELETE =================
     @GetMapping("/delete/{id}")
