@@ -16,6 +16,8 @@ public class EmailService {
     @Async
     public void sendEmail(ConsultationRequest request) {
         try {
+            System.out.println("Starting Email Send Process for: " + request.getName());
+            
             SimpleMailMessage message = new SimpleMailMessage();
             message.setFrom("abhisheksingh09072001@gmail.com");
             message.setTo("abhisheksingh09072001@gmail.com");
@@ -27,9 +29,11 @@ public class EmailService {
                            "Message: " + request.getMessage());
             
             mailSender.send(message);
-            System.out.println("Email Sent Successfully!");
+            System.out.println(">>> SUCCESS: Email Sent Successfully to Admin!");
+            
         } catch (Exception e) {
-            System.err.println("Email Error: " + e.getMessage());
+            System.err.println(">>> ERROR: Email failed to send!");
+            e.printStackTrace(); // Ye poora dukh-dard logs mein print karega
         }
     }
 }
