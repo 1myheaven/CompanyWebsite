@@ -1,8 +1,8 @@
 @Controller
 public class ConsultationController {
     
-    @Autowired
-    private EmailService emailService; // Service use karein
+//    @Autowired
+//    private EmailService emailService; // Service use karein
 
     @PostMapping
     public String submitForm(@ModelAttribute ConsultationRequest request, Model model) {
