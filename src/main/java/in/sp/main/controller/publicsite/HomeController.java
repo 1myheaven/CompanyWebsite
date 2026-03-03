@@ -8,19 +8,19 @@ public class HomeController {
 
     @GetMapping("/")
     public String homePage() {
-        return "Layout/home";   // templates/home.html
+        return "layout/home";   // templates/home.html
     }
     @GetMapping("/services")
     public String services() {
-        return "Layout/services";
+        return "layout/services";
     }
     @GetMapping("/case-studies")
     public String caseStudies() {
-        return "Layout/case-studies";
+        return "layout/case-studies";
     }
     @GetMapping("/about")
     public String about() {
-        return "Layout/about";
+        return "layout/about";
     }
 
 }
