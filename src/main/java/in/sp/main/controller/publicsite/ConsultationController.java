@@ -1,19 +1,21 @@
 package in.sp.main.controller.publicsite;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import in.sp.main.entity.ConsultationRequest;
 import in.sp.main.repository.ConsultationRepository;
+import in.sp.main.service.EmailService; // Ye import zaroori hai
 
 @Controller
 @RequestMapping("/consultation")
 public class ConsultationController {
 
     private final ConsultationRepository repository;
+
+    @Autowired
+    private EmailService emailService;
 
     public ConsultationController(ConsultationRepository repository) {
         this.repository = repository;
@@ -27,10 +29,13 @@ public class ConsultationController {
 
     @PostMapping
     public String submitForm(@ModelAttribute ConsultationRequest consultationRequest, Model model) {
-        // Database mein save karein
+        // 1. Database mein save turant hoga
         repository.save(consultationRequest);
 
-        model.addAttribute("successMessage", "Request submitted! We will contact you soon.");
+        // 2. Email background mein chali jayegi
+        emailService.sendEmail(consultationRequest);
+
+        model.addAttribute("successMessage", "Request submitted! Email notification sent.");
         model.addAttribute("consultationRequest", new ConsultationRequest());
 
         return "layout/consultancy";
