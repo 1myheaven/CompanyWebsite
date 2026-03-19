@@ -1,38 +1,52 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="layout/base :: head('Home | YourCompany')">
-	<style>
-	    /* Isse body aur html hamesha poori screen cover karenge */
-	    html, body {
-	        height: 100%;
-	        margin: 0;
-	    }
-	</style>
-</head>
+<head th:replace="layout/base :: head(title='Home | YourCompany')"></head>
 
 <body class="d-flex flex-column min-vh-100">
 
+<!-- NAVBAR -->
 <div th:replace="layout/base :: navbar"></div>
 
+<!-- MAIN CONTENT -->
 <main class="flex-fill">
 
 <section class="bg-light text-center py-5">
     <div class="container">
+
+        <!-- LOGO -->
+        <div class="mb-4">
+            <img th:src="@{/images/company.png}"
+                 alt="Company Logo"
+                 style="
+                    height:200px;
+                    width:200px;
+                    border-radius:50%;
+                    object-fit:cover;
+                    border:2px solid black;
+                    padding:4px;
+                 ">
+        </div>
+
+        <!-- HEADING -->
         <h1 class="display-4 fw-bold">
             We Help Businesses Grow with Data & Technology
         </h1>
 
+        <!-- SUBTEXT -->
         <p class="lead mt-3">
             Website Development | Data Analytics | Business Consulting | Student Mentorship
         </p>
 
+        <!-- BUTTON -->
         <a th:href="@{/consultation}" class="btn btn-warning btn-lg mt-3">
             Book Free Consultation
         </a>
+
     </div>
 </section>
 
+<!-- SECOND SECTION -->
 <section class="py-5">
     <div class="container text-center">
         <h2 class="fw-bold">Why Choose Us?</h2>
@@ -45,6 +59,7 @@
 
 </main>
 
+<!-- FOOTER -->
 <div th:replace="layout/base :: footer"></div>
 
 </body>
