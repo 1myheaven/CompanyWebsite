@@ -1,72 +1,51 @@
-<section class="py-5 bg-white">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold">Our Expertise</h2>
-            <div class="mx-auto" style="width: 60px; height: 3px; background-color: #ffc107;"></div>
-        </div>
-        
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm p-3">
-                    <div class="card-body">
-                        <h4 class="card-title fw-bold text-primary">Web Development</h4>
-                        <p class="card-text text-muted">Modern, responsive, and high-performance websites built using the latest frameworks like React and Spring Boot.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm p-3">
-                    <div class="card-body">
-                        <h4 class="card-title fw-bold text-primary">Data Analytics</h4>
-                        <p class="card-text text-muted">Transform raw data into actionable insights with our advanced visualization and predictive modeling services.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm p-3">
-                    <div class="card-body">
-                        <h4 class="card-title fw-bold text-primary">Business Consulting</h4>
-                        <p class="card-text text-muted">Strategic planning to scale your business, optimize operations, and maximize your profit margins.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 
-<section class="py-5 bg-light">
+<head th:replace="layout/base :: head('Home | YourCompany')">
+	<style>
+	    /* Isse body aur html hamesha poori screen cover karenge */
+	    html, body {
+	        height: 100%;
+	        margin: 0;
+	    }
+	</style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+<div th:replace="layout/base :: navbar"></div>
+
+<main class="flex-fill">
+
+<section class="bg-light text-center py-5">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <h2 class="fw-bold">Level Up Your Career with Mentorship</h2>
-                <p class="lead mt-3">Hum sirf businesses ki help nahi karte, balki future developers ko guide bhi karte hain.</p>
-                <ul class="list-unstyled mt-4">
-                    <li class="mb-2">✅ Hands-on Project Training</li>
-                    <li class="mb-2">✅ Interview Preparation (DSA & System Design)</li>
-                    <li class="mb-2) ">✅ Resume Building & Networking Tips</li>
-                </ul>
-                <button class="btn btn-outline-dark mt-3">Join Mentorship Program</button>
-            </div>
-            <div class="col-lg-6 mt-4 mt-lg-0">
-                <div class="p-5 bg-warning rounded-4 text-center">
-                    <h3 class="fw-bold">500+ Students</h3>
-                    <p class="mb-0">Already mentored and placed in top companies.</p>
-                </div>
-            </div>
-        </div>
+        <h1 class="display-4 fw-bold">
+            We Help Businesses Grow with Data & Technology
+        </h1>
+
+        <p class="lead mt-3">
+            Website Development | Data Analytics | Business Consulting | Student Mentorship
+        </p>
+
+        <a th:href="@{/consultation}" class="btn btn-warning btn-lg mt-3">
+            Book Free Consultation
+        </a>
     </div>
 </section>
 
 <section class="py-5">
     <div class="container text-center">
-        <h2 class="fw-bold">What People Say</h2>
-        <div class="row mt-5">
-            <div class="col-md-8 mx-auto">
-                <blockquote class="blockquote">
-                    <p class="fst-italic">"NirmalVeda solutions helped us automate our entire reporting system. Their data expertise is unmatched!"</p>
-                    <footer class="blockquote-footer mt-2 text-primary">Rahul Sharma, <cite>CEO of TechStart</cite></footer>
-                </blockquote>
-            </div>
-        </div>
+        <h2 class="fw-bold">Why Choose Us?</h2>
+        <p class="mt-3">
+            We combine technology, analytics, and strategic thinking 
+            to help businesses maximize profit and students build strong careers.
+        </p>
     </div>
 </section>
+
+</main>
+
+<div th:replace="layout/base :: footer"></div>
+
+</body>
+</html>
