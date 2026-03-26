@@ -6,34 +6,37 @@
 <body class="d-flex flex-column min-vh-100">
 
 <div th:replace="~{layout/base :: navbar}"></div>
+
 <main class="flex-fill">
 
-<!-- ================= CASE STUDIES SECTION ================= -->
-<section class="py-5 bg-light">
+<!-- HERO -->
+<section class="py-5 bg-light text-center">
     <div class="container">
+        <h1 class="fw-bold">Our Case Studies</h1>
+        <p class="text-muted mt-3">
+            Real results through data-driven strategies and smart digital solutions.
+        </p>
+    </div>
+</section>
 
-        <div class="text-center mb-5">
-            <h2 class="fw-bold">Our Case Studies</h2>
-            <p class="text-muted">
-                Real impact through data-driven decisions and strategic consultancy.
-            </p>
-        </div>
+<!-- CASE STUDIES -->
+<section class="py-5">
+    <div class="container">
 
         <div class="row g-4">
 
-            <!-- Case Study 1 -->
+            <!-- CASE 1 -->
             <div class="col-md-6">
                 <div class="card shadow-sm border-0 rounded-4 h-100 p-4">
                     <h5 class="fw-bold">📊 Business Profit Optimization</h5>
                     <p class="text-muted">
-                        A local startup was facing consistent losses without
-                        understanding the root cause.
+                        A startup was facing continuous losses due to poor financial tracking.
                     </p>
 
                     <ul class="text-muted">
-                        <li>✔ Analyzed 6 months financial data</li>
-                        <li>✔ Identified unnecessary operational expenses</li>
-                        <li>✔ Suggested cost restructuring strategy</li>
+                        <li>✔ Analyzed 6 months of financial data</li>
+                        <li>✔ Identified unnecessary expenses</li>
+                        <li>✔ Suggested cost optimization strategy</li>
                     </ul>
 
                     <p class="fw-semibold text-success">
@@ -42,65 +45,62 @@
                 </div>
             </div>
 
-            <!-- Case Study 2 -->
+            <!-- CASE 2 -->
             <div class="col-md-6">
                 <div class="card shadow-sm border-0 rounded-4 h-100 p-4">
                     <h5 class="fw-bold">🌐 Digital Presence Transformation</h5>
                     <p class="text-muted">
-                        A consultancy firm had no digital visibility
-                        and low client engagement.
+                        A business had no online presence and struggled to get clients.
                     </p>
 
                     <ul class="text-muted">
-                        <li>✔ Built modern responsive website</li>
-                        <li>✔ Optimized SEO strategy</li>
-                        <li>✔ Implemented lead capture system</li>
+                        <li>✔ Built responsive website</li>
+                        <li>✔ Implemented SEO strategy</li>
+                        <li>✔ Created lead capture system</li>
                     </ul>
 
                     <p class="fw-semibold text-success">
-                        Result: 3x increase in monthly inquiries.
+                        Result: 3x increase in inquiries.
                     </p>
                 </div>
             </div>
 
-            <!-- Case Study 3 -->
+            <!-- CASE 3 -->
             <div class="col-md-6">
                 <div class="card shadow-sm border-0 rounded-4 h-100 p-4">
-                    <h5 class="fw-bold">🎓 Student Career Planning</h5>
+                    <h5 class="fw-bold">🎓 Student Career Success</h5>
                     <p class="text-muted">
-                        A final-year student was confused about career direction
-                        and lacked practical skills.
+                        A student lacked direction and practical skills.
                     </p>
 
                     <ul class="text-muted">
-                        <li>✔ Conducted skill gap analysis</li>
-                        <li>✔ Suggested industry-relevant roadmap</li>
-                        <li>✔ Guided internship preparation</li>
+                        <li>✔ Skill gap analysis</li>
+                        <li>✔ Personalized roadmap</li>
+                        <li>✔ Internship preparation guidance</li>
                     </ul>
 
                     <p class="fw-semibold text-success">
-                        Result: Secured internship within 2 months.
+                        Result: Internship secured within 2 months.
                     </p>
                 </div>
             </div>
 
-            <!-- Case Study 4 -->
+            <!-- CASE 4 -->
             <div class="col-md-6">
                 <div class="card shadow-sm border-0 rounded-4 h-100 p-4">
                     <h5 class="fw-bold">📈 Data-Driven Growth Strategy</h5>
                     <p class="text-muted">
-                        A small business lacked clear financial tracking
-                        and growth planning.
+                        A small business had no structured growth plan.
                     </p>
 
                     <ul class="text-muted">
-                        <li>✔ Built profit-loss tracking dashboard</li>
-                        <li>✔ Monthly performance review system</li>
-                        <li>✔ Strategic growth roadmap</li>
+                        <li>✔ Built analytics dashboard</li>
+                        <li>✔ Monthly performance tracking</li>
+                        <li>✔ Strategic growth planning</li>
                     </ul>
 
                     <p class="fw-semibold text-success">
-                        Result: Structured financial control & steady growth.
+                        Result: Stable and consistent business growth.
                     </p>
                 </div>
             </div>
@@ -110,17 +110,74 @@
     </div>
 </section>
 
+<!-- IMPACT STATS -->
+<section class="py-5 bg-dark text-white text-center">
+    <div class="container">
+        <h2 class="fw-bold mb-4">Our Impact</h2>
+
+        <div class="row">
+            <div class="col-md-3">
+                <h3>50+</h3>
+                <p>Projects Delivered</p>
+            </div>
+            <div class="col-md-3">
+                <h3>30+</h3>
+                <p>Businesses Helped</p>
+            </div>
+            <div class="col-md-3">
+                <h3>100+</h3>
+                <p>Students Guided</p>
+            </div>
+            <div class="col-md-3">
+                <h3>95%</h3>
+                <p>Success Rate</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROCESS EXPLAIN -->
+<section class="py-5">
+    <div class="container text-center">
+        <h3 class="fw-bold">How We Achieve Results</h3>
+        <p class="text-muted mt-3 mx-auto" style="max-width: 800px;">
+            Our case studies are built on a strong foundation of data analysis,
+            real-world implementation, and continuous improvement.
+            We focus on solving real problems and delivering measurable outcomes.
+        </p>
+    </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="py-5 bg-light text-center">
+    <div class="container">
+        <h3 class="fw-bold">Client Feedback</h3>
+
+        <p class="mt-3 text-muted">
+            "Their data analysis completely changed our business decisions."
+        </p>
+
+        <p class="text-muted">
+            "Best consultancy service for students and startups."
+        </p>
+    </div>
+</section>
+
 <!-- CTA -->
 <section class="py-5 text-center bg-primary text-white">
     <div class="container">
         <h3 class="fw-bold mb-3">Want to Be Our Next Success Story?</h3>
-        <p class="mb-4">Let us help you transform your business or career.</p>
-        <a th:href="@{/consultation}" class="btn btn-light btn-lg rounded-3">
+        <p class="mb-4">
+            Let us help you transform your business or career.
+        </p>
+        <a th:href="@{/consultation}" class="btn btn-light btn-lg">
             Book Consultation
         </a>
     </div>
 </section>
+
 </main>
+
 <div th:replace="~{layout/base :: footer}"></div>
 
 </body>

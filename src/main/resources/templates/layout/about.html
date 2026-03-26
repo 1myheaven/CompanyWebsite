@@ -6,35 +6,36 @@
 <body class="d-flex flex-column min-vh-100">
 
 <div th:replace="~{layout/base :: navbar}"></div>
+
 <main class="flex-fill">
 
-<!-- ================= ABOUT SECTION ================= -->
-<section class="py-5 bg-light">
+<!-- HERO -->
+<section class="py-5 bg-light text-center">
     <div class="container">
+        <h1 class="fw-bold">About Our Company</h1>
+        <p class="text-muted mt-3">
+            Empowering Businesses & Students with Smart Digital Solutions
+        </p>
+    </div>
+</section>
 
-        <div class="text-center mb-5">
-            <h2 class="fw-bold">About Our Company</h2>
-            <p class="text-muted">
-                Empowering Businesses & Students with Smart Digital Solutions.
-            </p>
-        </div>
-
+<!-- WHO WE ARE -->
+<section class="py-5">
+    <div class="container">
         <div class="row align-items-center">
+
             <div class="col-md-6">
-                <h4 class="fw-bold mb-3">Who We Are</h4>
+                <h3 class="fw-bold mb-3">Who We Are</h3>
                 <p class="text-muted">
-                    We are a technology and consultancy firm focused on building
-                    modern digital solutions and guiding individuals towards
-                    sustainable growth. Our goal is to combine technology,
-                    data analytics, and strategic thinking to create real impact.
+                    We are a technology-driven company focused on building powerful digital solutions
+                    and guiding individuals toward long-term success. Our approach combines
+                    website development, data analytics, and strategic consultancy.
                 </p>
 
                 <p class="text-muted">
-                    From website development to profit & loss analysis,
-                    we help businesses make smarter decisions.
-                    We also provide consultancy to students,
-                    helping them choose the right career path
-                    and develop industry-ready skills.
+                    We believe that every business needs a strong online presence and every individual
+                    needs the right direction to succeed in life. That’s why we work on both —
+                    business growth and personal development.
                 </p>
             </div>
 
@@ -43,43 +44,97 @@
                     <h5 class="fw-bold">Our Core Focus</h5>
                     <ul class="text-muted mt-3">
                         <li>✔ Website & Web Application Development</li>
-                        <li>✔ Business Data Analytics & P/L Insights</li>
+                        <li>✔ AI-Based Data Analytics</li>
                         <li>✔ Student Career Consultancy</li>
-                        <li>✔ Long-Term Growth & Strategy Planning</li>
+                        <li>✔ Business Growth Strategy</li>
                     </ul>
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
 </section>
 
-<!-- ================= MISSION SECTION ================= -->
-<section class="py-5">
-    <div class="container text-center">
-
+<!-- MISSION -->
+<section class="py-5 bg-light text-center">
+    <div class="container">
         <h3 class="fw-bold mb-4">Our Mission</h3>
         <p class="text-muted mx-auto" style="max-width: 800px;">
-            Our mission is to bridge the gap between technology and real-world survival.
-            We believe that data-driven decisions and proper career guidance
-            can transform lives. We aim to build profitable businesses
-            and guide students toward stable, growth-oriented futures.
+            Our mission is to bridge the gap between technology and real-world success.
+            We aim to help businesses grow using data-driven decisions and guide students
+            toward stable and successful careers.
         </p>
-
     </div>
 </section>
 
-<!-- ================= VISION SECTION ================= -->
-<section class="py-5 bg-primary text-white">
-    <div class="container text-center">
+<!-- VISION -->
+<section class="py-5 bg-primary text-white text-center">
+    <div class="container">
         <h3 class="fw-bold mb-4">Our Vision</h3>
         <p class="mx-auto" style="max-width: 800px;">
-            To become a trusted consultancy partner that empowers businesses
-            with analytical insights and prepares students
-            to survive and succeed in the competitive world.
+            To become a trusted digital partner that empowers businesses with smart solutions
+            and prepares individuals to succeed in a competitive world.
         </p>
     </div>
 </section>
+
+<!-- VALUES -->
+<section class="py-5">
+    <div class="container text-center">
+        <h3 class="fw-bold mb-4">Our Core Values</h3>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <h5>💡 Innovation</h5>
+                <p class="text-muted">
+                    We use modern technology to solve real-world problems.
+                </p>
+            </div>
+
+            <div class="col-md-4">
+                <h5>🤝 Trust</h5>
+                <p class="text-muted">
+                    We believe in long-term relationships and transparency.
+                </p>
+            </div>
+
+            <div class="col-md-4">
+                <h5>📈 Growth</h5>
+                <p class="text-muted">
+                    Our focus is always on measurable growth and results.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- WHY DIFFERENT -->
+<section class="py-5 bg-light">
+    <div class="container text-center">
+        <h3 class="fw-bold">What Makes Us Different?</h3>
+        <p class="text-muted mt-3 mx-auto" style="max-width: 800px;">
+            Unlike traditional companies, we don’t just provide services —
+            we build complete growth systems. We combine website development,
+            data analytics, and consultancy to deliver real, measurable results.
+        </p>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5 text-center bg-dark text-white">
+    <div class="container">
+        <h3 class="fw-bold mb-3">Let’s Build Something Great Together</h3>
+        <p class="mb-4">
+            Join us and take your business or career to the next level.
+        </p>
+        <a th:href="@{/contact}" class="btn btn-warning btn-lg">
+            Contact Us
+        </a>
+    </div>
+</section>
+
 </main>
 
 <div th:replace="~{layout/base :: footer}"></div>

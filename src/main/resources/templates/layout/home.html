@@ -11,34 +11,24 @@
 <!-- MAIN CONTENT -->
 <main class="flex-fill">
 
+<!-- HERO -->
 <section class="bg-light text-center py-5">
     <div class="container">
 
-        <!-- LOGO -->
         <div class="mb-4">
             <img th:src="@{/images/company.png}"
                  alt="Company Logo"
-                 style="
-                    height:200px;
-                    width:200px;
-                    border-radius:50%;
-                    object-fit:cover;
-                    border:2px solid black;
-                    padding:4px;
-                 ">
+                 style="height:200px;width:200px;border-radius:50%;object-fit:cover;border:2px solid black;padding:4px;">
         </div>
 
-        <!-- HEADING -->
         <h1 class="display-4 fw-bold">
-            We Help Businesses Grow with Data & Technology
+            Transform Your Business with Smart Digital Solutions
         </h1>
 
-        <!-- SUBTEXT -->
         <p class="lead mt-3">
-            Website Development | Data Analytics | Business Consulting | Student Mentorship
+            Website Development | AI Data Analytics | Business Consulting | Career Mentorship
         </p>
 
-        <!-- BUTTON -->
         <a th:href="@{/consultation}" class="btn btn-warning btn-lg mt-3">
             Book Free Consultation
         </a>
@@ -46,14 +36,189 @@
     </div>
 </section>
 
-<!-- SECOND SECTION -->
+<!-- ABOUT PREVIEW -->
+<section class="py-5">
+    <div class="container text-center">
+        <h2 class="fw-bold">Who We Are</h2>
+        <p class="mt-3 text-muted">
+            We are a technology-driven company helping businesses grow using websites,
+            data analytics, and smart strategies. We also guide students and professionals
+            to build strong and successful careers.
+        </p>
+
+        <a th:href="@{/about}" class="btn btn-outline-dark mt-3">Learn More</a>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="bg-light py-5">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-4">Our Services</h2>
+
+        <div class="row">
+
+            <div class="col-md-4 mb-4">
+                <div class="p-4 border rounded shadow-sm h-100">
+                    <h4>🌐 Website Development</h4>
+                    <p class="text-muted">
+                        We build fast, responsive, and SEO-friendly websites
+                        that help your business grow online.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="p-4 border rounded shadow-sm h-100">
+                    <h4>📊 AI & Data Analytics</h4>
+                    <p class="text-muted">
+                        Analyze your business data and increase profit using
+                        intelligent tools and insights.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="p-4 border rounded shadow-sm h-100">
+                    <h4>🎓 Career Consultancy</h4>
+                    <p class="text-muted">
+                        Get expert guidance for career growth, skills,
+                        and real-life decision making.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <a th:href="@{/services}" class="btn btn-warning mt-3">Explore Services</a>
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
 <section class="py-5">
     <div class="container text-center">
         <h2 class="fw-bold">Why Choose Us?</h2>
-        <p class="mt-3">
-            We combine technology, analytics, and strategic thinking 
-            to help businesses maximize profit and students build strong careers.
+
+        <div class="row mt-4">
+
+            <div class="col-md-3">
+                <h5>✔ Expert Team</h5>
+                <p class="text-muted">Skilled professionals with modern tech knowledge.</p>
+            </div>
+
+            <div class="col-md-3">
+                <h5>✔ Affordable</h5>
+                <p class="text-muted">High quality services at budget price.</p>
+            </div>
+
+            <div class="col-md-3">
+                <h5>✔ Fast Delivery</h5>
+                <p class="text-muted">On-time project completion.</p>
+            </div>
+
+            <div class="col-md-3">
+                <h5>✔ Result Focused</h5>
+                <p class="text-muted">We deliver measurable results.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section class="bg-light py-5">
+    <div class="container text-center">
+        <h2 class="fw-bold">Our Process</h2>
+
+        <div class="row mt-4">
+
+            <div class="col-md-3">
+                <h5>1. Requirement</h5>
+                <p class="text-muted">Understanding your needs.</p>
+            </div>
+
+            <div class="col-md-3">
+                <h5>2. Planning</h5>
+                <p class="text-muted">Creating strategy.</p>
+            </div>
+
+            <div class="col-md-3">
+                <h5>3. Development</h5>
+                <p class="text-muted">Building solution.</p>
+            </div>
+
+            <div class="col-md-3">
+                <h5>4. Delivery</h5>
+                <p class="text-muted">Final product & support.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- STATS -->
+<section class="py-5 bg-dark text-white text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h2 class="fw-bold">50+</h2>
+                <p>Projects</p>
+            </div>
+            <div class="col-md-3">
+                <h2 class="fw-bold">30+</h2>
+                <p>Clients</p>
+            </div>
+            <div class="col-md-3">
+                <h2 class="fw-bold">10+</h2>
+                <p>Case Studies</p>
+            </div>
+            <div class="col-md-3">
+                <h2 class="fw-bold">100%</h2>
+                <p>Satisfaction</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CASE STUDY PREVIEW -->
+<section class="py-5">
+    <div class="container text-center">
+        <h2 class="fw-bold">Real Results</h2>
+        <p class="text-muted mt-3">
+            We help businesses and students achieve measurable success.
         </p>
+
+        <a th:href="@{/case-study}" class="btn btn-outline-dark mt-3">
+            View Case Studies
+        </a>
+    </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="fw-bold">What Clients Say</h2>
+
+        <p class="mt-3 text-muted">
+            "Great service! My business grew after their website and analytics."
+        </p>
+
+        <p class="text-muted">
+            "Best career guidance. Helped me choose the right path."
+        </p>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5 bg-primary text-white text-center">
+    <div class="container">
+        <h2 class="fw-bold">Ready to Grow?</h2>
+        <p class="mt-3">
+            Start your journey with us today.
+        </p>
+
+        <a th:href="@{/contact}" class="btn btn-light btn-lg mt-3">
+            Contact Now
+        </a>
     </div>
 </section>
 

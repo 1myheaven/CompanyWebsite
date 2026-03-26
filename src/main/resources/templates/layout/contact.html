@@ -6,66 +6,115 @@
 <body class="d-flex flex-column min-vh-100">
 
 <div th:replace="layout/base :: navbar"></div>
+
 <main class="flex-fill">
 
-<!-- ================= CONTACT SECTION ================= -->
+<!-- HERO -->
+<section class="py-5 bg-light text-center">
+    <div class="container">
+        <h1 class="fw-bold">Get In Touch</h1>
+        <p class="text-muted mt-3">
+            Have a question or want to grow your business or career? We’re here to help.
+        </p>
+    </div>
+</section>
+
+<!-- CONTACT FORM + INFO -->
 <section class="py-5">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
+        <div class="row g-4">
 
-                <h2 class="text-center fw-bold mb-4">Contact Us</h2>
+            <!-- FORM -->
+            <div class="col-md-7">
+                <div class="card shadow-sm border-0 rounded-4 p-4">
+                    <h4 class="fw-bold mb-3">Send Us a Message</h4>
 
-                <form th:action="@{/contact}" method="post">
+                    <form th:action="@{/contact}" method="post">
 
-                    <!-- Name -->
-                    <div class="mb-3">
-                        <label class="form-label">Full Name</label>
-                        <input type="text" name="name"
-                               class="form-control"
-                               placeholder="Enter your name" required>
-                    </div>
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" name="name"
+                                   class="form-control"
+                                   placeholder="Enter your name" required>
+                        </div>
 
-                    <!-- Email -->
-                    <div class="mb-3">
-                        <label class="form-label">Email</label>
-                        <input type="email" name="email"
-                               class="form-control"
-                               placeholder="Enter your email" required>
-                    </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" name="email"
+                                   class="form-control"
+                                   placeholder="Enter your email" required>
+                        </div>
 
-                    <!-- Subject -->
-                    <div class="mb-3">
-                        <label class="form-label">Subject</label>
-                        <input type="text" name="subject"
-                               class="form-control"
-                               placeholder="Enter subject">
-                    </div>
+                        <div class="mb-3">
+                            <label class="form-label">Subject</label>
+                            <input type="text" name="subject"
+                                   class="form-control"
+                                   placeholder="Enter subject">
+                        </div>
 
-                    <!-- Message -->
-                    <div class="mb-3">
-                        <label class="form-label">Message</label>
-                        <textarea name="message"
-                                  class="form-control"
-                                  rows="4"
-                                  placeholder="Write your message..."
-                                  required></textarea>
-                    </div>
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea name="message"
+                                      class="form-control"
+                                      rows="5"
+                                      placeholder="Write your message..."
+                                      required></textarea>
+                        </div>
 
-                    <!-- Submit Button -->
-                    <div class="text-center">
-                        <button type="submit"
-                                class="btn btn-warning px-4">
+                        <button type="submit" class="btn btn-warning w-100">
                             Send Message
                         </button>
-                    </div>
 
-                </form>
-
+                    </form>
+                </div>
             </div>
+
+            <!-- CONTACT INFO -->
+            <div class="col-md-5">
+                <div class="card shadow-sm border-0 rounded-4 p-4 mb-3">
+                    <h5 class="fw-bold">📧 Email</h5>
+                    <p class="text-muted">yourcompany@email.com</p>
+                </div>
+
+                <div class="card shadow-sm border-0 rounded-4 p-4 mb-3">
+                    <h5 class="fw-bold">📞 Phone</h5>
+                    <p class="text-muted">+91 XXXXX XXXXX</p>
+                </div>
+
+                <div class="card shadow-sm border-0 rounded-4 p-4">
+                    <h5 class="fw-bold">📍 Location</h5>
+                    <p class="text-muted">India</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
+
+<!-- TRUST SECTION -->
+<section class="py-5 bg-light text-center">
+    <div class="container">
+        <h3 class="fw-bold">Why Contact Us?</h3>
+        <p class="text-muted mt-3">
+            We don’t just respond — we provide real solutions. Whether you need a website,
+            business growth strategy, or career guidance, we’re here to help you succeed.
+        </p>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5 bg-dark text-white text-center">
+    <div class="container">
+        <h3 class="fw-bold mb-3">Let’s Start Something Great</h3>
+        <p class="mb-4">
+            Reach out today and take the first step toward success.
+        </p>
+        <a th:href="@{/consultation}" class="btn btn-warning btn-lg">
+            Book Free Consultation
+        </a>
+    </div>
+</section>
+
 </main>
 
 <div th:replace="layout/base :: footer"></div>

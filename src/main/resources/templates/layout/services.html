@@ -6,17 +6,22 @@
 <body class="d-flex flex-column min-vh-100">
 
 <div th:replace="~{layout/base :: navbar}"></div>
+
 <main class="flex-fill">
 
-<section class="py-5 bg-light">
+<!-- HERO -->
+<section class="py-5 bg-light text-center">
     <div class="container">
+        <h1 class="fw-bold">Our Professional Services</h1>
+        <p class="text-muted mt-3">
+            We provide complete digital solutions to help businesses grow and individuals succeed.
+        </p>
+    </div>
+</section>
 
-        <div class="text-center mb-5">
-            <h2 class="fw-bold">Our Professional Services</h2>
-            <p class="text-muted">
-                We help businesses grow digitally and guide students towards a stable future.
-            </p>
-        </div>
+<!-- SERVICES CARDS -->
+<section class="py-5">
+    <div class="container">
 
         <div class="row g-4">
 
@@ -25,22 +30,32 @@
                 <div class="card shadow-sm border-0 rounded-4 h-100 p-4">
                     <h5 class="fw-bold">🌐 Website Development</h5>
                     <p class="text-muted">
-                        We design and develop modern, responsive, and scalable websites
-                        for startups, businesses, and personal brands.
-                        From company websites to dynamic web applications.
+                        We design and develop modern, responsive, SEO-friendly websites 
+                        that help businesses build a strong online presence and convert visitors into customers.
                     </p>
+                    <ul class="text-muted">
+                        <li>✔ Business Websites</li>
+                        <li>✔ E-commerce Websites</li>
+                        <li>✔ Portfolio Websites</li>
+                        <li>✔ Custom Web Applications</li>
+                    </ul>
                 </div>
             </div>
 
             <!-- Data Analytics -->
             <div class="col-md-6">
                 <div class="card shadow-sm border-0 rounded-4 h-100 p-4">
-                    <h5 class="fw-bold">📊 Profit & Loss Analysis</h5>
+                    <h5 class="fw-bold">📊 AI & Data Analytics</h5>
                     <p class="text-muted">
-                        Using advanced data analytics, we analyze your business data
-                        to identify profit trends, loss areas, and growth opportunities.
-                        Make data-driven decisions with confidence.
+                        We analyze your business data using smart tools and techniques 
+                        to help you increase profit, reduce loss, and make better decisions.
                     </p>
+                    <ul class="text-muted">
+                        <li>✔ Profit & Loss Analysis</li>
+                        <li>✔ Sales Insights</li>
+                        <li>✔ Business Reports</li>
+                        <li>✔ Growth Prediction</li>
+                    </ul>
                 </div>
             </div>
 
@@ -49,22 +64,32 @@
                 <div class="card shadow-sm border-0 rounded-4 h-100 p-4">
                     <h5 class="fw-bold">🎓 Student Consultancy</h5>
                     <p class="text-muted">
-                        We guide students in career planning, skill development,
-                        internship opportunities, and real-world industry exposure
-                        to help them survive and succeed in today’s competitive world.
+                        We guide students in choosing the right career path, 
+                        developing industry-ready skills, and preparing for real-world challenges.
                     </p>
+                    <ul class="text-muted">
+                        <li>✔ Career Guidance</li>
+                        <li>✔ Skill Roadmap</li>
+                        <li>✔ Internship Preparation</li>
+                        <li>✔ Resume & Interview Help</li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Career & Life Guidance -->
+            <!-- Career & Life -->
             <div class="col-md-6">
                 <div class="card shadow-sm border-0 rounded-4 h-100 p-4">
                     <h5 class="fw-bold">💼 Career & Life Strategy</h5>
                     <p class="text-muted">
-                        Our consultancy focuses on long-term growth planning.
-                        We help individuals build stable income sources,
-                        improve decision-making skills, and create sustainable life strategies.
+                        Our consultancy focuses on long-term growth and stability. 
+                        We help individuals make better life decisions and build sustainable income sources.
                     </p>
+                    <ul class="text-muted">
+                        <li>✔ Career Planning</li>
+                        <li>✔ Life Decision Guidance</li>
+                        <li>✔ Income Strategy</li>
+                        <li>✔ Personal Growth Plan</li>
+                    </ul>
                 </div>
             </div>
 
@@ -73,16 +98,56 @@
     </div>
 </section>
 
-<!-- Call To Action -->
+<!-- PROCESS -->
+<section class="py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="fw-bold">Our Working Process</h2>
+
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <h5>1. Requirement</h5>
+                <p class="text-muted">We understand your needs clearly.</p>
+            </div>
+            <div class="col-md-3">
+                <h5>2. Planning</h5>
+                <p class="text-muted">We create a smart strategy.</p>
+            </div>
+            <div class="col-md-3">
+                <h5>3. Execution</h5>
+                <p class="text-muted">We implement solutions.</p>
+            </div>
+            <div class="col-md-3">
+                <h5>4. Growth Support</h5>
+                <p class="text-muted">We help you grow continuously.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY OUR SERVICES -->
+<section class="py-5">
+    <div class="container text-center">
+        <h2 class="fw-bold">Why Our Services Work</h2>
+        <p class="text-muted mt-3">
+            Our solutions are based on real-world experience, practical implementation, 
+            and data-driven strategies. We focus on results, not just promises.
+        </p>
+    </div>
+</section>
+
+<!-- CTA -->
 <section class="py-5 text-center bg-primary text-white">
     <div class="container">
-        <h3 class="fw-bold mb-3">Ready to Grow & Plan Your Future?</h3>
-        <p class="mb-4">Let us help you build a profitable business and a secure career path.</p>
+        <h3 class="fw-bold mb-3">Ready to Grow Your Business?</h3>
+        <p class="mb-4">
+            Let us help you build a profitable business and a secure future.
+        </p>
         <a th:href="@{/contact}" class="btn btn-light btn-lg rounded-3">
             Get Consultation
         </a>
     </div>
 </section>
+
 </main>
 
 <div th:replace="~{layout/base :: footer}"></div>
